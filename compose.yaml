@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+
+    the-intention-api:
+
+        container_name: the-intention-api
+        
+        image: softwareshinobi/the-intention-api:42.0
+
+        build: 
+
+            context: .
+
+            dockerfile: Dockerfile
+
+        restart: always
+
+        ports:
+
+            - "80:8888"
