@@ -1,0 +1,49 @@
+version: '3'
+ 
+services:
+
+    agent-eight-api-mysql:
+
+        container_name: agent-eight-api-mysql
+
+        image: mysql:8
+
+##        volumes:
+##
+##            - /tmp/container-volumes/mysql:/var/lib/mysql
+
+        ports:
+
+            - "3306:3306"
+
+        environment:
+
+            MYSQL_ROOT_PASSWORD: aggiepride
+
+            MYSQL_DATABASE: agent_eight
+
+            MYSQL_USER: agent_eight
+
+            MYSQL_PASSWORD: agent_eight
+
+    agent-eight-api-phpmyadmin:
+
+        container_name: agent-eight-api-phpmyadmin
+
+        image: beeyev/phpmyadmin-lightweight
+
+        links:
+
+           - agent-eight-api-mysql
+
+        ports:
+
+            - 3380:80
+
+        environment:
+
+            PMA_HOST: agent-eight-api-mysql
+
+            PMA_PORT: 3306
+
+            PMA_ARBITRARY: 1
