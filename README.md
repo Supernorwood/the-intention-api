@@ -1,7 +1,3 @@
-# the-intention-api
-
-I'd be glad to create a README.md file in Markdown format for your Spring API that manages intentions, including setting, retrieving, and various case modifications:
-
 # Intention Management API
 
 This Spring API provides functionalities for managing intentions, allowing users to set, retrieve, and modify their intentions with different case conversions.
@@ -16,6 +12,7 @@ This Spring API provides functionalities for managing intentions, allowing users
 * Sentence case (first letter of each word capitalized)
 * Camel case (words joined with the first letter of each word capitalized)
 * Snake case (words joined with underscores)
+
 ## Technologies Used
 
 Spring Framework (version: [mention your Spring version])
